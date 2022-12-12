@@ -25,3 +25,18 @@ pnpm create next-app --example with-tailwindcss with-tailwindcss-app
 ```
 
 Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+
+Notes:
+
+- When you npm run dev, the files will always be SSR
+- The only way to test static generation is to npm run build && npm run start to see the effect of statically generated site
+- Main reason to use client component is to allow user interactivity / stateful-ness / anything done on the browser / requires element to be binded to
+- Source: https://beta.nextjs.org/docs/rendering/fundamentals
+
+// http://localhost:3000/search/Javascript
+// "search" is the segment of the url
+// "Javascript" is the leaf node of the url
+
+https://beta.nextjs.org/docs/routing/defining-routes#route-groups
+
+- To organise routes without affecting the URL, create a group to keep related routes together. The folders in parenthesis will be omitted from the URL (e.g. (marketing) or (shop)).
